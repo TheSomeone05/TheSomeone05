@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+        <head>
+<title>Reilly's Website</title>
+<style>
+    body {
+        background: rgb(30, 97, 21);
+        color: rgb(255, 255, 255);
+        padding: 35px;
+        font-family: Bree Serif;
+    }
+    #all-contents {
+      max-width: 1200px;
+        margin: auto;
+    }
+ 
+    /* navigation menu */
+    nav {
+        border-radius: 30% 30% 30% 30%;
+        background: rgb(0, 0, 0);
+       margin: 0 auto;
+       margin-bottom: 30px;
+        display: flex;
+        padding: 8px;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex: 1;
+        margin: 0;
+    }
+    #nav-ul {
+        list-style-image: none;
+    }
+    .nav-li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+ 
+    /* main container area beneath menu */
+    main {
+        border-radius: 15% 15% 15% 15%;
+        background: rgb(0, 0, 0);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 15px;
+        padding: 40px;
+    }
+    .sidebar-img {
+        width: 300px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    #interests {
+        border: 4px rgb(0, 0, 0) ridge;
+        padding: 8px;
+    }
+    h2 {
+        margin: 0px;
+    }
+    h3 {
+        margin: 0px;
+    }
+ </style>
+        </head>
+
+    <body>
+
+        <div id="all-contents">
+            <nav>
+                <h1>Reilly's Website</h1>
+                <ul id="nav-ul">
+                    <li id="nav-li"><a href="index.html"> Home </a></li>
+                    <li id="nav-li"><a href="portfolio.html"> Portfolio </a></li>
+                </ul>
+            </nav>
+            <main>
+                 <!--Sidebar Section-->
+               <div class="sidebar">
+                    <img class="sidebar-img" src = "Images/profile picture.PNG"> 
+               </div> 
+                <!--Content Section-->
+               <div class="content">
+                    <h2>Reilly Fastring</h2>
+                    <p>Student at NHS</p>
+                    <!--Interests Section-->
+                    <div id="intrests">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>I like watching racing</li>
+                            <li>I like robotics</li>
+                            <li>I do theater</li>
+                        </ul>
+                    </div>
+               </div>
+            </main>
+        </div>
+    </body>
+</html>
