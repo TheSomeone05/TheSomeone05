@@ -3,6 +3,72 @@
         <head>
 <title>Reilly's Website</title>
 <style>
+         body {
+        background: rgb(30, 97, 21);
+        color: rgb(255, 255, 255);
+        padding: 35px;
+        font-family: Bree Serif;
+    }
+    #all-contents {
+      max-width: 1200px;
+        margin: auto;
+    }
+ 
+    /* navigation menu */
+    nav {
+        border-radius: 30% 30% 30% 30%;
+        background: rgb(0, 0, 0);
+       margin: 0 auto;
+       margin-bottom: 30px;
+        display: flex;
+        padding: 8px;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex: 1;
+        margin: 0;
+    }
+    #nav-ul {
+        list-style-image: none;
+    }
+    .nav-li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+ 
+    /* main container area beneath menu */
+    main {
+        border-radius: 15% 15% 15% 15%;
+        background: rgb(0, 0, 0);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 15px;
+        padding: 40px;
+    }
+    .sidebar-img {
+        width: 300px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    #interests {
+        border: 4px rgb(0, 0, 0) ridge;
+        padding: 8px;
+    }
+    h2 {
+        margin: 0px;
+    }
+    h3 {
+        margin: 0px;
+    }
     /* portfolio styles */
     .content h1 {
              color: black;
@@ -37,14 +103,14 @@
             <nav>
                 <h1>Reilly's Website</h1>
                 <ul id="nav-ul">
-                    <li id="nav-li"><a href="index.html"> Home </a></li>
-                    <li id="nav-li"><a href="portfolio.html"> Portfolio </a></li>
+                    <li class="nav-li"><a href="index.html"> Home </a></li>
+                    <li class="nav-li"><a href="portfolio.html"> Portfolio </a></li>
                 </ul>
             </nav>
             <main>
                 <div class="content">
                     <h1>Portfolio</h1>
-                    <ul id = "portfolio">                    </ul>
+                    <ul id = "portfolio">
                     <li><a href="projects/platformer/">Platformer : A cannon - dodging, collectible - grabbing adventure game for Halleb0t</a></li>
                      <li><a href="projects/bouncing-box/">Bouncing Box : A project that gives you a taste of game development on the web </a></li>
                     <li><a href="projects/circularity/">Circularity : A motion poem using random number generation and velocity applied to circle shapes...</a></li>
