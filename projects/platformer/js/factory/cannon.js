@@ -36,11 +36,11 @@
         let create = function (type, position, delay) {
             
             if (type === "top" || type === "bottom") {
-                if (position < 0 || position > game.world.width) {
+                if (position < 0 || position > 1910) {
                     throw new Error(`You are trying to place a cannon off the stage at ${position}, this is not allowed!`);
                 }
             } else if (type === "right" || type === "left") {
-                if (position < 0 || position > game.world.height) {
+                if (position < 0 || position > 990) {
                     throw new Error(`You are trying to place a cannon off the stage at ${position}, this is not allowed!`);
                 }
             }
@@ -50,17 +50,17 @@
             if (type === "top") {
                 x = position, y = 40;
                 angle = -180;
-                tweenTo.y = game.world.height;
+                tweenTo.y = 990;
             } else if (type === "bottom") {
-                x = position, y = game.world.height - 72;
+                x = position, y = 990 - 72;
                 angle = 0;
                 tweenTo.y = 0;
             } else if (type === "left") {
                 x = 42, y = position;
                 angle = 90;
-                tweenTo.x = game.world.width;
+                tweenTo.x = 1910;
             } else if (type === "right") {
-                x = game.world.width - 42, y = position;
+                x = 1910 - 42, y = position;
                 angle = -90;
                 tweenTo.x = 0
             } else {

@@ -6126,7 +6126,7 @@ jQuery.extend( {
 			if ( type === "string" && ( ret = rcssNum.exec( value ) ) && ret[ 1 ] ) {
 				value = adjustCSS( elem, name, ret );
 
-				// Fixes bug #9237
+				// Fixes bug #9217
 				type = "number";
 			}
 

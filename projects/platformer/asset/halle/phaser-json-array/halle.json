@@ -2,7 +2,7 @@
 
 {
 	"filename": "duck-0001.png",
-	"frame": {"x":1249,"y":1921,"w":53,"h":106},
+	"frame": {"x":1249,"y":1923,"w":53,"h":106},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":15,"y":7,"w":53,"h":106},
@@ -2922,7 +2922,7 @@
 },
 {
 	"filename": "lazer-0023.png",
-	"frame": {"x":1050,"y":1921,"w":81,"h":106},
+	"frame": {"x":1050,"y":1923,"w":81,"h":106},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":12,"y":11,"w":81,"h":106},
@@ -3154,7 +3154,7 @@
 },
 {
 	"filename": "run-0021.png",
-	"frame": {"x":889,"y":1925,"w":76,"h":118},
+	"frame": {"x":889,"y":1923,"w":76,"h":118},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":7,"y":0,"w":76,"h":118},
@@ -3242,7 +3242,7 @@
 },
 {
 	"filename": "walk-0009.png",
-	"frame": {"x":1304,"y":1921,"w":53,"h":106},
+	"frame": {"x":1304,"y":1923,"w":53,"h":106},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":8,"y":1,"w":53,"h":106},
@@ -3266,7 +3266,7 @@
 },
 {
 	"filename": "walk-0012.png",
-	"frame": {"x":1193,"y":1921,"w":54,"h":106},
+	"frame": {"x":1193,"y":1923,"w":54,"h":106},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":8,"y":0,"w":54,"h":106},
@@ -3338,7 +3338,7 @@
 },
 {
 	"filename": "walk-0021.png",
-	"frame": {"x":1359,"y":1921,"w":57,"h":105},
+	"frame": {"x":1359,"y":1923,"w":57,"h":105},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":6,"y":2,"w":57,"h":105},
@@ -3410,7 +3410,7 @@
 },
 {
 	"filename": "walk-0030.png",
-	"frame": {"x":1133,"y":1921,"w":58,"h":106},
+	"frame": {"x":1133,"y":1923,"w":58,"h":106},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":7,"y":1,"w":58,"h":106},
