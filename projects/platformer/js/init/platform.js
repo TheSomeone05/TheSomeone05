@@ -38,13 +38,28 @@
 
     // example:
 
-    createPlatform(0, 550, 2);
-    createPlatform(840,460, .2);
+  // here
+  //floors and walls
+    createPlatform(0, 500, .8);
+    createPlatform(450, 500, 3);
+    createPlatform(1800, 500, 2);
+    createPlatform(916, 0, .1, 16.6);
+    createPlatform(0, 600, .2);
+    createPlatform(200, 600, 4.5);
+    createPlatform(250, 830, .1, 5);
+    //bottom obstacles
+    createPlatform(250, 800, .25);
+    createPlatform(480, 800, .25);
+    createPlatform(710, 800, .25);
+    createPlatform(940, 800, .25);
+    createPlatform(1170, 800, .25);
+    createPlatform(1400, 800, .25);
+    createPlatform(1630, 800, .25);
+    createPlatform(1860, 800, .25);
     
-    createPlatform(500,370, .3);
-    createPlatform(160,280, .3);
-    createPlatform(500,190, .3);
-    createPlatform(740,100, .5);
+    
+    
+    
  
 
 

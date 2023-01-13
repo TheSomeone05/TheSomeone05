@@ -6,7 +6,7 @@
         opspark = window.opspark,
         animations = {},
         spawnX = 30,
-        spawnY = 600;
+        spawnY = 880;
         
     opspark.createPlayer = function (game) {
         let 
@@ -130,9 +130,9 @@
             state.enter = function() {
                 console.log(`entering ${ name }`);
                 asset.body.bounce.y = 0;
-                game.add.tween(asset.body).to( { y: asset.body.y -100 }, 1000, Phaser.Easing.Linear.None, true);
+                game.add.tween(asset.body).to( { y: asset.body.y -150 }, 1000, Phaser.Easing.Linear.None, true);
 
-                asset.body.velocity.x = 200 * _direction;
+                asset.body.velocity.x = 150 * _direction;
                 asset.x += xOffset * _direction;
                 asset.y += yOffset;
             };
