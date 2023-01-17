@@ -44,8 +44,7 @@
     createPlatform(450, 500, 3);
     createPlatform(1800, 500, 2);
     createPlatform(916, 0, .1, 16.6);
-    createPlatform(0, 600, .2);
-    createPlatform(200, 600, 4.5);
+    createPlatform(200, 625, 4.5);
     createPlatform(250, 830, .1, 5);
     //bottom obstacles
     createPlatform(250, 800, .25);
@@ -56,6 +55,21 @@
     createPlatform(1400, 800, .25);
     createPlatform(1630, 800, .25);
     createPlatform(1860, 800, .25);
+    createPlatform(0,725, .4);
+    //top obstacles
+    //left
+    createPlatform(75, 375, .2);
+    createPlatform(0, 250, .2);
+    createPlatform(200,250, .3);
+    createPlatform(400, 150, .2);
+    createPlatform(550, 75, .3);
+    //right
+    createPlatform(125+916, 375, .2);
+    createPlatform(50+916, 250, .2);
+    createPlatform(250+916,250, .3);
+    createPlatform(450+916, 150, .2);
+    createPlatform(600+916, 75, .3);
+  
     
     
     
