@@ -48,7 +48,7 @@
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
-			
+			box.off('click', handleBoxMisClick);
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX, newPositionY) {
 				box.css('left', newPositionX);
@@ -71,7 +71,9 @@
 			var speed = 4;
 			var speedY = 2;
 			var boardHeight = jQuery(window).height(); 
-			var randNum = 0;			/* 
+			var randNum = 0;	
+			var misClicks = 0;		
+			/* 
 			Increase the value of PositionX by 10
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -107,7 +109,6 @@
 				positionY = randNum * (boardHeight - 75);
 				points = points + 1;
 				changeBoxText(points);
-				misClickCounter = 0;
 				if (speed > 0)
 				speed = speed + 1;
 
@@ -122,19 +123,16 @@
 				if (speedY < 0) {
 					speedY = speedY - 1;
 				}
-
 			};
 
-			function misClick () {
-				misClickCounter = misClickCounter + 1;
-				if (misClickCounter > 9) {
-					endgame ();
+			function handleBoxMisClick () {
+				misClicks = misClicks + 1;
+				if (misClicks > 9) {
+					speed = 2;
+					speedY = 4;
+					points = 0;
 				}
 			};
-
-			
-
-			
 
 		})();
 	</script>
