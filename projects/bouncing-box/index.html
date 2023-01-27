@@ -9,11 +9,11 @@
 			width: 70px;
 			height: 70px;
 			background-color: rgb(90, 155, 29);
-			font-size: 300%;
+			font-size: 30px;
 			text-align: center;
 			text-decoration-color: aliceblue;
 			user-select: none;
-			display: block;
+			display: box;
 			position: absolute;
 			top: 0px;
 			left: 0px;  /* <--- Change me! */
@@ -44,11 +44,11 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 16.7 milliseconds, call the update Function (see below)
-			var Interval = setInterval(update, 16.7);
+			var interval = setInterval(update, 16.7);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
-			box.off('click', handleBoxMisClick);
+			board.on('click', handleBoardClick);
 			// moves the Box to a new position on the screen along the X-Axis
 			function moveBoxTo(newPositionX, newPositionY) {
 				box.css('left', newPositionX);
@@ -72,7 +72,8 @@
 			var speedY = 2;
 			var boardHeight = jQuery(window).height(); 
 			var randNum = 0;	
-			var misClicks = 0;		
+			var misClicks = 0;
+			var clicks = 0;
 			/* 
 			Increase the value of PositionX by 10
 			This Function will be called 20 times/second. Each time it is called,
@@ -104,11 +105,12 @@
 			it should increase the points total, increase the speed, and move the box to
 			the left side of the screen.
 			*/
-			function handleBoxClick() {
-				positionX = randNum * (boardWidth - 60);
-				positionY = randNum * (boardHeight - 75);
-				points = points + 1;
-				changeBoxText(points);
+
+			function endGame() {
+				clearInterval(interval);
+			};
+
+			function changeSpeed () {
 				if (speed > 0)
 				speed = speed + 1;
 
@@ -123,16 +125,34 @@
 				if (speedY < 0) {
 					speedY = speedY - 1;
 				}
+				clicks = 0;
 			};
 
-			function handleBoxMisClick () {
-				misClicks = misClicks + 1;
-				if (misClicks > 9) {
-					speed = 2;
-					speedY = 4;
-					points = 0;
+			function handleBoxClick() {
+				positionX = randNum * (boardWidth - 60);
+				positionY = randNum * (boardHeight - 75);
+				points = points + 1;
+				misClicks = 0;
+				changeBoxText(points);
+				clicks = clicks + 1;
+				if (clicks > 2) {
+					changeSpeed ();
+				}
+
+			};
+			
+			function handleBoardClick () {
+				
+				if (misClicks != 10) {
+					misClicks = misClicks + 1
+				}
+				else {
+					endGame ();
+					changeBoxText("You Lose!");
 				}
 			};
+
+			
 
 		})();
 	</script>
