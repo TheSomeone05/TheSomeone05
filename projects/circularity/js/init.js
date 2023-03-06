@@ -28,10 +28,10 @@ var init = function (window) {
         
         //circle drawing function
         function drawCircle() {
-            circles = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circles, canvas);
-            view.addChild(circles);
-            circles.push(circles);
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas);
+            view.addChild(circle);
+            circles.push(circle);
         };
 
         // TODO 3 / 7 : Call the drawCircle() function 
@@ -62,8 +62,10 @@ var init = function (window) {
 
             // TODO 9 : Iterate over the array
            
-            for (var f = 0; f < circles.length; f++) {
-                var eachValue = circles[f];
+            //should make a loop dependent on the length of the array, that runs the two lines of code for each circle.
+
+            for (var j = 0; j < circles.length; j++) {
+                var eachValue = circles[j];
         
                 physikz.updatePosition([eachCircle]);
                 game.updatePosition([eachCircle]);
