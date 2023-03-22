@@ -72,8 +72,7 @@ var background = function (window) {
               }
             */
               var buildingHeights = [300, 150, 175, 200, 225]; // creates a variable called buildingHeight and stores 300 at the height of the building
-              var building;
-              var buildingColors = ["blue", "brown", "grey", "black", "green"]
+              var buildingColors = ["blue", "brown", "grey", "black", "green"] // created an array of colors and stored it in the variable buildingColors
               for (var i = 0; i < buildingHeights.length; i++) {
                 var building = draw.rect(75, buildingHeights[i], buildingColors[i], "Black", 1); // draws a rectangle and stores it in the variable building
                 building.x = 200 * i; // Multiplies 200 times the current iteration of the loop so that the buildings are 200 pixles apart and store it a the x value of the building
@@ -102,16 +101,19 @@ var background = function (window) {
             
             // TODO 4: Part 2 - Move the tree!
             
-            tree.x = tree.x - 1.5;
+            tree.x = tree.x - 1.5; // takes current x position of the tree and subtracts from it to make it move left and reassigns it to the tree.x position
+            
+            //check if the tree has moved off the canvas and if it has it resets it to the right side of the canvas
             if (tree.x < -200) {
-            tree.x = canvasWidth;
+            tree.x = canvasWidth; 
             }            
             // TODO 5: Part 2 - Parallax
+            //loops through the buildings array to acess each index of the array, remove it, and check its position on the canvas and resets to the right side if it goes off to the left.
             for (var i = 0; i < buildings.length; i++) {
                 var building = buildings[i];
-                building.x = building.x - .2;
-                if (building.x < -75) {
-                    building.x = canvas.width
+                building.x = building.x - .2; // moves the building
+                if (building.x < -75) { // checks the position of the building
+                    building.x = canvas.width //resets the building to the right side of the canvas
                 }
 
             }
