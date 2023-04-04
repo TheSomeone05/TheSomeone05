@@ -16,13 +16,19 @@ var level01 = function (window) {
             "number": 1, 
             "speed": -3,
             "gameItems": [
-                { "type": "sawblade", "x": 400, "y": groundY - 105 },
-                { "type": "sawblade", "x": 700, "y": groundY - 0},
-                { "type": "sawblade", "x": 1000, "y": groundY - 105},
+                //{ "type": "sawblade", "x": 20000, "y": groundY -  375},
+               // { "type": "sawblade", "x": 20100, "y": groundY - 375},
+                //{ "type": "sawblade", "x": 20200, "y": groundY - 105},
+                { "type": "Spikes", "x": 1500, "y": groundY - 5},
+                { "type": "Spikes", "x": 1900, "y": groundY - 5},
+                { "type": "Spikes", "x": 2300, "y": groundY - 5},
+                { "type": "Spikes", "x": 2500, "y": groundY - 5},
 
-                { "type": "enemy", "x": 400, "y": groundY - 50, "velocityX": -1.5},
+                { "type": "Water", "x": 500, "y": groundY - 5},
+
+                { "type": "enemy", "x": 1400, "y": groundY - 50, "velocityX": -1.5},
                 
-                { "type": "reward", "x": 400, "y": groundY - 50, "VelocityX": -1.25},
+                { "type": "reward", "x": 1400, "y": groundY - 50, "VelocityX": -1.25},
             ]
         };
         window.levelData = levelData;
@@ -34,6 +40,7 @@ var level01 = function (window) {
 
         
         // creates a sawblade at any given x and y value
+        /*
         function createSawBlade (x, y) {
             var hitZoneSize = 25; // size of the hitzone assigned to the variable hitZoneSize
             var damageFromObstacle = 10; // sets the damage amount and assigns it to a variable called damageFromObstacle
@@ -46,18 +53,36 @@ var level01 = function (window) {
             obstacleImage.x = -25; // modify the x value of the image to line up with the hitzone
             obstacleImage.y = -25; // modify the y value of the image to line up with the hitzone
         }
+        */
 
         function createSpikes (x, y) {
-            var hitZoneSize = 25; // size of the hitzone assigned to the variable hitZoneSize
-            var damageFromObstacle = 10; // sets the damage amount and assigns it to a variable called damageFromObstacle
+            var hitZoneSize = 40; // size of the hitzone assigned to the variable hitZoneSize
+            var damageFromObstacle = 40; // sets the damage amount and assigns it to a variable called damageFromObstacle
             var spikeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle); // creates the obstacle and assigns it to spikeHitZone
             spikeHitZone.x = x; // assigns the x value using the argument passed as the x parameter
             spikeHitZone.y = y; // assigns the y value using the argument as the y parameter and bases it off of the groundY
             game.addGameItem(spikeHitZone); // adds the hitzone to the game 
-            var obstacleImage = draw.bitmap("img/sawblade.png"); // draws the image as a bitmap and stores it to the variable obstacleImage
+            var obstacleImage = draw.bitmap("img/newSpikes.png"); // draws the image as a bitmap and stores it to the variable obstacleImage
+            obstacleImage.scaleX = .3;
+            obstacleImage.scaleY = .3;
             spikeHitZone.addChild(obstacleImage); // adds obstacleImage as a child of the sawBladeHitZone
-            obstacleImage.x = -25; // modify the x value of the image to line up with the hitzone
-            obstacleImage.y = -25; // modify the y value of the image to line up with the hitzone
+            obstacleImage.x = -40; // modify the x value of the image to line up with the hitzone
+            obstacleImage.y = -30; // modify the y value of the image to line up with the hitzone
+        }
+
+        function createWater (x, y) {
+            var hitZoneSize = 40; // size of the hitzone assigned to the variable hitZoneSize
+            var damageFromObstacle = 40; // sets the damage amount and assigns it to a variable called damageFromObstacle
+            var waterHitZone = game.createObstacle(hitZoneSize, damageFromObstacle); // creates the obstacle and assigns it to spikeHitZone
+            waterHitZone.x = x; // assigns the x value using the argument passed as the x parameter
+            waterHitZone.y = y; // assigns the y value using the argument as the y parameter and bases it off of the groundY
+            game.addGameItem(waterHitZone); // adds the hitzone to the game 
+            var obstacleImage = draw.bitmap("img/waves.PNG"); // draws the image as a bitmap and stores it to the variable obstacleImage
+            obstacleImage.scaleX = .3;
+            obstacleImage.scaleY = .3;
+            waterHitZone.addChild(obstacleImage); // adds obstacleImage as a child of the sawBladeHitZone
+            obstacleImage.x = -40; // modify the x value of the image to line up with the hitzone
+            obstacleImage.y = -30; // modify the y value of the image to line up with the hitzone
         }
         
         
@@ -108,9 +133,15 @@ var level01 = function (window) {
         for (var i = 0; i < levelData.gameItems.length; i++) {
             var gameItem = levelData.gameItems[i]; // assigns the current index of the gameItems array to the variable gameItem
 
-            if (gameItem.type === "sawblade") { // checks the type of the game item
-                createSawBlade(gameItem.x, gameItem.y); // if the type is true it executes createSawBlade
-            };
+            //if (gameItem.type === "sawblade") { // checks the type of the game item
+            //    createSawBlade(gameItem.x, gameItem.y); // if the type is true it executes createSawBlade
+            //};
+            if (gameItem.type === "Water") { // checks the type of game item
+                createWater(gameItem.x, gameItem.y); // if the type is true it executes createSpikes
+            }
+            if (gameItem.type === "Spikes") { // checks the type of game item
+                createSpikes(gameItem.x, gameItem.y); // if the type is true it executes createSpikes
+            }
             if (gameItem.type === "enemy") { // checks the type of the game item
                 createEnemy(gameItem.x, gameItem.y, gameItem.velocityX); // if the type is true it executes createEnemy
             };
