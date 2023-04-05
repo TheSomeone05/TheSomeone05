@@ -24,7 +24,8 @@ var level01 = function (window) {
                 { "type": "Spikes", "x": 2300, "y": groundY - 5},
                 { "type": "Spikes", "x": 2500, "y": groundY - 5},
 
-                { "type": "Water", "x": 500, "y": groundY - 5},
+                { "type": "Water", "x": 500, "y": groundY + 30},
+
 
                 { "type": "enemy", "x": 1400, "y": groundY - 50, "velocityX": -1.5},
                 
@@ -68,20 +69,22 @@ var level01 = function (window) {
             spikeHitZone.addChild(obstacleImage); // adds obstacleImage as a child of the sawBladeHitZone
             obstacleImage.x = -40; // modify the x value of the image to line up with the hitzone
             obstacleImage.y = -30; // modify the y value of the image to line up with the hitzone
+
+           
         }
 
         function createWater (x, y) {
-            var hitZoneSize = 40; // size of the hitzone assigned to the variable hitZoneSize
-            var damageFromObstacle = 40; // sets the damage amount and assigns it to a variable called damageFromObstacle
+            var hitZoneSize = 80; // size of the hitzone assigned to the variable hitZoneSize
+            var damageFromObstacle = 100; // sets the damage amount and assigns it to a variable called damageFromObstacle
             var waterHitZone = game.createObstacle(hitZoneSize, damageFromObstacle); // creates the obstacle and assigns it to spikeHitZone
             waterHitZone.x = x; // assigns the x value using the argument passed as the x parameter
             waterHitZone.y = y; // assigns the y value using the argument as the y parameter and bases it off of the groundY
             game.addGameItem(waterHitZone); // adds the hitzone to the game 
-            var obstacleImage = draw.bitmap("img/waves.PNG"); // draws the image as a bitmap and stores it to the variable obstacleImage
-            obstacleImage.scaleX = .3;
-            obstacleImage.scaleY = .3;
-            waterHitZone.addChild(obstacleImage); // adds obstacleImage as a child of the sawBladeHitZone
-            obstacleImage.x = -40; // modify the x value of the image to line up with the hitzone
+            var obstacleImage = draw.bitmap("img/newestWaves.png"); // draws the image as a bitmap and stores it to the variable obstacleImage
+            obstacleImage.scaleX = .7;
+            obstacleImage.scaleY = .7;
+            waterHitZone.addChild(obstacleImage); // adds obstacleImage as a child of the waterHitZone
+            obstacleImage.x = -100; // modify the x value of the image to line up with the hitzone
             obstacleImage.y = -30; // modify the y value of the image to line up with the hitzone
         }
         

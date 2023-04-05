@@ -221,7 +221,7 @@
         _jumpfly = new createjs.Sprite(spritesheet, "jumpfly");
         _jumpfly.x = -(_jumpfly.getBounds().width / 5) - 20;
         _jumpfly.regX = _jumpfly.width / 2;
-        _jumpfly.y = -(_jumpfly.getBounds().height / 5) - 17;
+        _jumpfly.y = -(_jumpfly.getBounds().height / 3) - 17;
         _jumpfly.on('animationend', function (e) {
             setAsset(_walk);
             kickUpDust();
