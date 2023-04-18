@@ -48,9 +48,9 @@ var level01 = function (window) {
                 //{ "type": "bat", "x": 1400, "y": groundY - 120, "velocityX": -2},
                 
 
-                { "type": "bandage", "x": 2200, "y": 675, "velocityX": -2},
-                { "type": "bandage", "x": 4300, "y": 675, "velocityX": -2},
-                { "type": "gold", "x": 4700, "y": 650, "velocityX": -2}
+                { "type": "bandage", "x": 2200, "y": groundY, "velocityX": -2},
+                { "type": "bandage", "x": 4300, "y": groundY, "velocityX": -2},
+                { "type": "gold", "x": 4700, "y": groundY, "velocityX": -2}
 
                 //{ "type": "gold", "x": 300, "y": 650, "velocityX": -2}
 
